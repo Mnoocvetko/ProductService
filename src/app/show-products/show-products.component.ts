@@ -7,12 +7,14 @@ import { ProductService } from '../product-service/product.service';
   styleUrls: ['./show-products.component.scss']
 })
 export class ShowProductsComponent implements OnInit {
-
   private products;
-
+  flag = false;
 
   constructor(private productService: ProductService) {
     this.products = productService.getProducts();
+  }
+
+  ngOnInit() {
   }
 
   delete(id) {
@@ -20,7 +22,9 @@ export class ShowProductsComponent implements OnInit {
     this.products = this.productService.getProducts();
   }
 
-  ngOnInit() {
+  edit(product) {
+    console.log(product);
+    this.flag = true;
   }
 
 }

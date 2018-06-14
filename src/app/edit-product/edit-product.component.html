@@ -1,0 +1,19 @@
+  <div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-5">
+          <label>Name:
+            <input type="text" #name [value]="productName">
+          </label>
+        </div>
+        <div class="col-md-5">
+          <label >Price:
+            <input type="text" #price [value]="productPrice">
+          </label>
+        </div>
+        <div class="col-md-2">
+          <button class="btn btn-success" (click)="edit(name.value, price.value); name.value =''; price.value = ''">Submit</button>
+        </div>
+      </div>
+    </div>
+  </div>

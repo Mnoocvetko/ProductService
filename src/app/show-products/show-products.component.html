@@ -15,8 +15,9 @@
         <button class="btn btn-danger" (click)="delete(product.id)">Delete</button>
       </td>
       <td>
-        <button class="btn btn-primary">Edit</button>
+        <button class="btn btn-primary" (click)="edit(product)">Edit</button>
       </td>
+      <td *ngIf="flag"><app-edit-product [editProductData]="product"></app-edit-product></td>
     </tr>
   </table>
 </div>

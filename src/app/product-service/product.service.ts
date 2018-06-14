@@ -35,4 +35,7 @@ export class ProductService {
     this.products = this.products.filter(obj => obj.id !== id);
   }
 
+  editProduct(id) {
+      }
+
 }
