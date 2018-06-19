@@ -8,24 +8,22 @@ import { ProductService } from '../product-service/product.service';
 })
 export class AddProductComponent implements OnInit {
 
-  private products: any[];
-
   constructor(private productService: ProductService) {
-    this.products = productService.getProducts();
   }
 
   ngOnInit() {
+    // this.productService.fetchBooks().subscribe(data => this.books = data);
   }
 
-  add(name, price) {
-    console.log('name: ' + name);
-    console.log('price: ' + price);
-    const product = {
-      'id': this.products.length + 1,
-      'name': name,
+  add(title, author, price) {
+
+    const book = {
+      'title': title,
+      'author': author,
       'price': price
     };
-    this.productService.addProduct(product);
+    this.productService.addBook(book);
+
   }
 
 }
