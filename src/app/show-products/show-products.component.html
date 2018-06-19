@@ -1,23 +1,26 @@
+
 <div>
   <app-add-product></app-add-product>
-  <h3>Products</h3>
+  <h3>Books</h3>
   <table>
     <tr>
-      <th>Name</th>
+      <th>Title</th>
+      <th>Author</th>
       <th>Price</th>
       <th>Delete</th>
       <th>Edit</th>
     </tr>
-    <tr *ngFor="let product of products">
-      <td>{{ product.name }}</td>
-      <td>{{ product.price }}</td>
+    <tr *ngFor="let book of getBooks()">
+      <td>{{ book.title }}</td>
+      <td>{{ book.author }}</td>
+      <td>{{ book.price }}</td>
       <td>
-        <button class="btn btn-danger" (click)="delete(product.id)">Delete</button>
+        <button class="btn btn-danger" (click)="delete(book.title)">Delete</button>
       </td>
       <td>
-        <button class="btn btn-primary" (click)="edit(product)">Edit</button>
+        <button class="btn btn-primary" (click)="edit(book)">Edit</button>
       </td>
-      <td *ngIf="flag"><app-edit-product [editProductData]="product"></app-edit-product></td>
+      <td *ngIf="flag"><app-edit-product [editProductData]="book"></app-edit-product></td>
     </tr>
   </table>
 </div>

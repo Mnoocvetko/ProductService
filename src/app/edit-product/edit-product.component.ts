@@ -7,15 +7,10 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class EditProductComponent implements OnInit {
   @Input() editProductData;
-  private productName;
-  private productPrice;
 
   constructor() { }
 
   ngOnInit() {
-    console.log(this.editProductData);
-    this.productName = this.editProductData.name;
-    this.productPrice = this.editProductData.price;
   }
 
   editProduct() {

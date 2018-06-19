@@ -1,20 +1,25 @@
 <div>
-  <h3>Add Product</h3>
+  <h3>Add Book</h3>
   <div>
     <div class="container">
       <div class="row">
-        <div class="col-md-5">
-          <label>Name:
-            <input type="text" #name>
+          <div class="col-md-3">
+              <label>Title:
+                <input type="text" #title>
+              </label>
+            </div>
+        <div class="col-md-3">
+          <label>Author:
+            <input type="text" #author>
           </label>
         </div>
-        <div class="col-md-5">
+        <div class="col-md-3">
           <label >Price:
             <input type="text" #price>
           </label>
         </div>
-        <div class="col-md-2">
-          <button class="btn btn-success" (click)="add(name.value, price.value); name.value =''; price.value = ''">Add</button>
+        <div class="col-md-3">
+          <button class="btn btn-success" (click)="add(title.value, author.value, price.value); title.value = ''; author.value =''; price.value = ''">Add</button>
         </div>
       </div>
     </div>

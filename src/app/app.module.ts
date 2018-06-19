@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { ShowProductsComponent } from './show-products/show-products.component';
 import { AddProductComponent } from './add-product/add-product.component';
 import { EditProductComponent } from './edit-product/edit-product.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { EditProductComponent } from './edit-product/edit-product.component';
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule
   ],
   providers: [],

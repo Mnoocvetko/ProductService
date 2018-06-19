@@ -7,24 +7,18 @@ import { ProductService } from '../product-service/product.service';
   styleUrls: ['./show-products.component.scss']
 })
 export class ShowProductsComponent implements OnInit {
-  private products;
-  flag = false;
 
-  constructor(private productService: ProductService) {
-    this.products = productService.getProducts();
+  constructor(private productService: ProductService) {}
+
+  ngOnInit(): void { }
+
+  getBooks() {
+    return this.productService.getBooks();
   }
 
-  ngOnInit() {
-  }
+  delete(title) {
+    this.productService.deleteBook(title);
 
-  delete(id) {
-    this.productService.deleteProduct(id);
-    this.products = this.productService.getProducts();
-  }
-
-  edit(product) {
-    console.log(product);
-    this.flag = true;
   }
 
 }
