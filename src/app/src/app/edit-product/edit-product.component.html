@@ -1,0 +1,24 @@
+  <div>
+    <div class="container">
+      <div class="row">
+          <div class="col-md-3">
+              <label>Title:
+                <input type="text" #title [value]="productTitle">
+              </label>
+            </div>
+        <div class="col-md-3">
+          <label>Author:
+            <input type="text" #author [value]="productAuthor">
+          </label>
+        </div>
+        <div class="col-md-3">
+          <label >Price:
+            <input type="text" #price [value]="productPrice">
+          </label>
+        </div>
+        <!-- <div class="col-md-3">
+          <button class="btn btn-success" (click)="edit(title.value, author.value, price.value); title =''; author.value =''; price.value = ''">Submit</button>
+        </div> -->
+      </div>
+    </div>
+  </div>
